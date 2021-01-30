@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <title>BiswaJs</title>
+    <meta property="og:title" content="CSS3 background Animation">
+    <meta property="og:url" content="https://biswajs.github.io">
+     <meta property="og:site_name" content="GitHub">
+     <meta property="og:description" content="Biswajs Profile on GitHub">
     <link href='//cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <style>
@@ -24,6 +28,7 @@
         }
 
         :root {
+            --square: rgb(255 198 34 / 94%);
             --card-bg: #171717;
             --bg: #101010;
             --font: "Inter", sans-serif;
@@ -49,7 +54,7 @@
         }
 
         .content {
-            margin-top: -100px;
+            margin-top: -400px;
             position: relative;
             animation: animatop 0.9s cubic-bezier(0.425, 1.14, 0.47, 1.125) forwards;
         }
@@ -181,14 +186,168 @@
                 left: -78px;
             }
         }
+
         .space {
-    margin: 0.9rem 0;
-}
+            margin: 0.9rem 0;
+        }
+
+
+        .wrapper {
+            background: var(--bg);
+            /* background: -webkit-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
+            background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%); */
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 400px;
+            margin-top: -200px;
+            overflow: hidden;
+        }
+
+        .bg-bubbles {
+            margin-top: -250px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .bg-bubbles li {
+            position: absolute;
+            list-style: none;
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-radius: 1px;
+            background-color: var(--square);
+
+            bottom: -160px;
+            -webkit-animation: square 25s infinite;
+            animation: square 25s infinite;
+            -webkit-transition-timing-function: linear;
+            transition-timing-function: linear;
+        }
+
+        .bg-bubbles li:nth-child(1) {
+            left: 10%;
+            background-color: rgb(253, 85, 225);
+
+        }
+
+        .bg-bubbles li:nth-child(2) {
+            left: 20%;
+            width: 25px;
+            height: 25px;
+            -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+            -webkit-animation-duration: 17s;
+            background-color: rgb(55, 253, 194);
+
+            animation-duration: 17s;
+        }
+
+        .bg-bubbles li:nth-child(3) {
+            left: 25%;
+            -webkit-animation-delay: 4s;
+            animation-delay: 4s;
+
+        }
+
+        .bg-bubbles li:nth-child(4) {
+            left: 40%;
+            width: 35px;
+            height: 35px;
+            -webkit-animation-duration: 22s;
+            animation-duration: 22s;
+            background-color: var(--square);
+        }
+
+        .bg-bubbles li:nth-child(5) {
+            left: 70%;
+            /* background-color: rgb(46, 174, 248); */
+
+        }
+
+        .bg-bubbles li:nth-child(6) {
+            left: 80%;
+            width: 18px;
+            height: 18px;
+            -webkit-animation-delay: 3s;
+            animation-delay: 3s;
+            background-color: var(--square);
+        }
+
+        .bg-bubbles li:nth-child(7) {
+            left: 32%;
+            width: 40px;
+            height: 40px;
+            -webkit-animation-delay: 7s;
+            animation-delay: 7s;
+        }
+
+        .bg-bubbles li:nth-child(8) {
+            left: 55%;
+            width: 20px;
+            height: 20px;
+            -webkit-animation-delay: 15s;
+            animation-delay: 15s;
+            -webkit-animation-duration: 40s;
+            animation-duration: 40s;
+            background-color: rgb(182, 64, 250);
+
+        }
+
+        .bg-bubbles li:nth-child(9) {
+            left: 25%;
+            width: 10px;
+            height: 10px;
+            -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+            -webkit-animation-duration: 40s;
+            animation-duration: 40s;
+            background-color: rgb(255, 217, 0);
+
+        }
+
+        .bg-bubbles li:nth-child(10) {
+            left: 90%;
+            width: 60px;
+            height: 60px;
+            -webkit-animation-delay: 11s;
+            animation-delay: 11s;
+        }
+
+        @-webkit-keyframes square {
+            0% {
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+            }
+
+            100% {
+                -webkit-transform: translateY(-700px) rotate(600deg);
+                transform: translateY(-700px) rotate(600deg);
+            }
+        }
+
+        @keyframes square {
+            0% {
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+            }
+
+            100% {
+                -webkit-transform: translateY(-700px) rotate(600deg);
+                transform: translateY(-700px) rotate(600deg);
+            }
+        }
     </style>
 
 </head>
 
-<body>
+<body class="wrapper">
     <!-- partial:index.partial.html -->
     <div class="content">
         <div class="card">
@@ -201,7 +360,7 @@
                 </div>
             </div>
         </div>
-        <div class="badgescard"> 
+        <div class="badgescard">
             <span class="devicons devicons-django"></span>
             <span class="devicons devicons-python"></span>
             <span class="devicons devicons-javascript_badge"></span>
@@ -212,6 +371,18 @@
 
         <div class="space"></div>
     </div>
+    <ul class="bg-bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
     <!-- partial -->
     <script>
         function loadBiswajs() {
