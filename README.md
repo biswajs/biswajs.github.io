@@ -1,2 +1,2 @@
 # biswajs.github.io
-My litle porfolio website.
+My little porfolio website.
